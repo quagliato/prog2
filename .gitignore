@@ -3,3 +3,4 @@ nbproject/*
 *.swp
 .~
 .DS_Store
+build/*
