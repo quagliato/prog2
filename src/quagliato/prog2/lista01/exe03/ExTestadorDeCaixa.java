@@ -19,6 +19,7 @@ import quagliato.prog2.util.StringUtils;
  */
 public class ExTestadorDeCaixa implements Exercicio {
 
+    @Override
     public void execute() {
 
         List<Caixa> listCaixa = new ArrayList<Caixa>();
