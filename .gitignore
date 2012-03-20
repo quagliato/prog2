@@ -1,6 +1,6 @@
-dist/*
-nbproject/*
 *.swp
-.~
-.DS_Store
+*DS_Store
+*~
+dist/*
 build/*
+nbproject/*
