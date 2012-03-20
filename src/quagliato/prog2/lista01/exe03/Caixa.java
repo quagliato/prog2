@@ -4,8 +4,6 @@
  */
 package quagliato.prog2.lista01.exe03;
 
-import java.math.BigDecimal;
-
 /**
  *
  * @author eduardo
