@@ -8,6 +8,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import quagliato.prog2.exceptions.StringException;
+import quagliato.prog2.lista01.exe01.ExTesteHorario;
 import quagliato.prog2.lista01.exe03.ExTestadorDeCaixa;
 import quagliato.prog2.lista01.exe07.ExTesteCarro;
 import quagliato.prog2.util.StringUtils;
@@ -28,6 +29,9 @@ public class Main {
             switch (a) {
                 case 0:
                     exit = true;
+                    break;
+                case 1:
+                    (new ExTesteHorario()).execute();
                     break;
                 case 3:
                     (new ExTestadorDeCaixa()).execute();
