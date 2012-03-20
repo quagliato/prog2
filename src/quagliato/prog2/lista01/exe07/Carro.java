@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package quagliato.prog2.lista01.exe07;
 
 /**
@@ -10,9 +6,9 @@ package quagliato.prog2.lista01.exe07;
  */
 public class Carro {
     
-    private int combustivel;
-    private int capacidadeMaxima;
-    private int mediaConsumo;
+    protected int combustivel;
+    protected int capacidadeMaxima;
+    protected int mediaConsumo;
 
     public Carro(int mediaConsumo, int capacidadeMaxima) {
         this.capacidadeMaxima = capacidadeMaxima;
