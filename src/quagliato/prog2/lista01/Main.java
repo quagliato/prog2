@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import quagliato.prog2.exceptions.StringException;
 import quagliato.prog2.lista01.exe03.ExTestadorDeCaixa;
+import quagliato.prog2.lista01.exe07.ExTesteCarro;
 import quagliato.prog2.util.StringUtils;
 
 /**
@@ -30,6 +31,9 @@ public class Main {
                     break;
                 case 3:
                     (new ExTestadorDeCaixa()).execute();
+                    break;
+                case 7:
+                    (new ExTesteCarro()).execute();
                     break;
             }
             try {
