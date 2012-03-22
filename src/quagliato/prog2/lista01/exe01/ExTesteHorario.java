@@ -1,5 +1,7 @@
 package quagliato.prog2.lista01.exe01;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Scanner;
 import quagliato.prog2.interfaces.Exercicio;
 
@@ -50,7 +52,11 @@ public class ExTesteHorario implements Exercicio {
         
         double valor = calculaValor(getIntervalo(hora1, hora2));
         
-        System.out.println("Valor final: R$ " + valor);
+        NumberFormat numberFormatter = new DecimalFormat();
+        numberFormatter.setMaximumFractionDigits(3);
+        numberFormatter.setMinimumFractionDigits(2);
+        
+        System.out.println("Valor final: R$ " + numberFormatter.format(valor));
         
     }
     
