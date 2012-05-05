@@ -17,9 +17,8 @@ public class CarroEsporte extends Carro {
     @Override
     public boolean andar(int km) {
         int consumido = km / (this.mediaConsumo / 2);
-        if (consumido > this.combustivel) {
+        if (consumido > this.combustivel)
             return false;
-        }
         this.combustivel -= consumido;
         return true;
     }
