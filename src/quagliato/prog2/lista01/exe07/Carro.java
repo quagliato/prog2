@@ -24,13 +24,13 @@ public class Carro {
         int consumido = km/this.mediaConsumo;
         if (consumido > this.combustivel) 
             return false;
-        this.combustivel =- consumido;
+        this.combustivel -= consumido;
         return true;
     }
     
     public boolean abastecer(int litros) {
         if (litros <= (this.capacidadeMaxima - this.combustivel)) {
-            this.combustivel =+ litros;
+            this.combustivel += litros;
             return true;
         }
         return false;
