@@ -7,6 +7,7 @@ import quagliato.prog2.exceptions.StringException;
 import quagliato.prog2.lista01.exe01.ExTesteHorario;
 import quagliato.prog2.lista01.exe03.ExTestadorDeCaixa;
 import quagliato.prog2.lista01.exe07.ExTesteCarro;
+import quagliato.prog2.lista01.exe09.ExTesteColaborador;
 import quagliato.prog2.util.StringUtils;
 
 /**
@@ -34,6 +35,9 @@ public class Main {
                     break;
                 case 7:
                     (new ExTesteCarro()).execute();
+                    break;
+                case 9:
+                    (new ExTesteColaborador()).execute();
                     break;
             }
             try {
