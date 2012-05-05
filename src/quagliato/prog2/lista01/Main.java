@@ -6,6 +6,7 @@ import quagliato.prog2.lista01.exe03.ExTestadorDeCaixa;
 import quagliato.prog2.lista01.exe07.ExTesteCarro;
 import quagliato.prog2.lista01.exe09.ExTesteColaborador;
 import quagliato.prog2.lista01.exe14.ExTesteEmail;
+import quagliato.prog2.lista01.exe17.Principal;
 import quagliato.prog2.util.StringUtils;
 
 /**
@@ -39,6 +40,9 @@ public class Main {
                     break;
                 case 14:
                     (new ExTesteEmail()).execute();
+                    break;
+                case 17:
+                    (new Principal()).execute();
                     break;
             }
 
