@@ -20,30 +20,19 @@ public class Carro {
         return combustivel;
     }
 
-    public void setCombustivel(int combustivel) {
-        this.combustivel = combustivel;
-    }
-
     public boolean andar(int km) {
         int consumido = km/this.mediaConsumo;
-        if ((consumido) > this.combustivel) {
+        if (consumido > this.combustivel) 
             return false;
-        }
-        this.combustivel = consumido;
+        this.combustivel =- consumido;
         return true;
     }
     
     public boolean abastecer(int litros) {
-        if (litros < (this.capacidadeMaxima + this.combustivel)) {
-            this.combustivel=+ litros;
+        if (litros <= (this.capacidadeMaxima - this.combustivel)) {
+            this.combustivel =+ litros;
             return true;
         }
         return false;
-    }
-    
-    
-    
-    
-   
-    
+    }   
 }
