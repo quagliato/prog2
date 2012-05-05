@@ -15,6 +15,14 @@ public class StringUtils {
             result = result + c;
         }
         return result;
-
+    }
+    
+    public static String fillWithSpaces(String s, int size) {
+        if (size == 0 || size < s.length()) 
+            return s;
+        
+        String result = s + StringUtils.repeat(' ', size - s.length());
+        
+        return result;
     }
 }
