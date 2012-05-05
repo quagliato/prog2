@@ -3,9 +3,6 @@ package quagliato.prog2.lista01.exe03;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import quagliato.prog2.exceptions.StringException;
 import quagliato.prog2.interfaces.Exercicio;
 import quagliato.prog2.util.StringUtils;
 
@@ -36,11 +33,9 @@ public class ExTestadorDeCaixa implements Exercicio {
             System.out.println();
 
         }
-        try {
-            System.out.println(StringUtils.repeat('-', 80));
-        } catch (StringException ex) {
-            Logger.getLogger(ExTestadorDeCaixa.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
+        System.out.println(StringUtils.repeat('-', 80));
+
 
         for (Caixa cx : listCaixa) {
             System.out.println("Caixa " + cx.getCaixaID());

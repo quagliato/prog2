@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Scanner;
 import quagliato.prog2.interfaces.Exercicio;
+import quagliato.prog2.util.StringUtils;
 
 /**
  *
@@ -32,7 +33,7 @@ public class ExTesteColaborador implements Exercicio {
 
         for (int i = 0; i < QTDE_COLABORADORES; i++) {
 
-            //adicionar repeticao de '-'
+            StringUtils.repeat('-', 80);
 
             System.out.println("COLABORADOR " + (i + 1));
 
@@ -69,7 +70,7 @@ public class ExTesteColaborador implements Exercicio {
 
         }
 
-        //adicionar repeticao de '*';
+        StringUtils.repeat('*', 80);
         
         NumberFormat numberFormatter = new DecimalFormat();
         numberFormatter.setMaximumFractionDigits(2);

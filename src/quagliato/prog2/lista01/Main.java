@@ -1,9 +1,6 @@
 package quagliato.prog2.lista01;
 
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import quagliato.prog2.exceptions.StringException;
 import quagliato.prog2.lista01.exe01.ExTesteHorario;
 import quagliato.prog2.lista01.exe03.ExTestadorDeCaixa;
 import quagliato.prog2.lista01.exe07.ExTesteCarro;
@@ -40,11 +37,9 @@ public class Main {
                     (new ExTesteColaborador()).execute();
                     break;
             }
-            try {
-                System.out.println(StringUtils.repeat('+', 80));
-            } catch (StringException ex) {
-                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            }
+
+            System.out.println(StringUtils.repeat('+', 80));
+
         }
     }
 }
