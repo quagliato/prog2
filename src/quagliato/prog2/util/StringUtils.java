@@ -1,7 +1,5 @@
 package quagliato.prog2.util;
 
-import quagliato.prog2.exceptions.StringException;
-
 /**
  *
  * @author eduardo
