@@ -33,7 +33,7 @@ public class ExTesteColaborador implements Exercicio {
 
         for (int i = 0; i < QTDE_COLABORADORES; i++) {
 
-            StringUtils.repeat('-', 80);
+            System.out.println(StringUtils.repeat('-', 80));
 
             System.out.println("COLABORADOR " + (i + 1));
 
@@ -70,7 +70,7 @@ public class ExTesteColaborador implements Exercicio {
 
         }
 
-        StringUtils.repeat('*', 80);
+        System.out.println(StringUtils.repeat('*', 80));
         
         NumberFormat numberFormatter = new DecimalFormat();
         numberFormatter.setMaximumFractionDigits(2);
