@@ -10,7 +10,7 @@ import quagliato.prog2.util.StringUtils;
  *
  * @author eduardo
  */
-public class Principal implements Exercicio {
+public class Principal17 implements Exercicio {
 
     @Override
     public void execute() {
@@ -27,7 +27,7 @@ public class Principal implements Exercicio {
         lista.adicionarItem(item3);
         lista.adicionarItem(item4);
 
-        Principal.imprimirLista(lista);
+        Principal17.imprimirLista(lista);
 
     }
 
