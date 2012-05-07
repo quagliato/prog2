@@ -32,8 +32,13 @@ public class Colaborador {
                 rendimentos = this.vlHora * 80;
                 break;
             case EMP:
-                rendimentos = ((this.vlHora * (1 + (0.10 * this.anosServico))) * this.qtdeHorasMes)
-                        * (this.qtdeHorasMes > 144 ? 1.5 : 1);
+                double vlBaseHora = this.vlHora * (1 + (0.10 * this.anosServico));
+                
+                if (this.qtdeHorasMes > 144)
+                    rendimentos = (vlBaseHora * 144) + (vlBaseHora * 1.5 * (this.qtdeHorasMes - 144));
+                else
+                    rendimentos = vlBaseHora * this.qtdeHorasMes;
+                
                 break;
             case SOC:
                 rendimentos = this.vlHora * this.qtdeHorasMes;
