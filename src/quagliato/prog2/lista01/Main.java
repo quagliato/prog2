@@ -8,6 +8,7 @@ import quagliato.prog2.lista01.exe09.ExTesteColaborador;
 import quagliato.prog2.lista01.exe14.ExTesteEmail;
 import quagliato.prog2.lista01.exe17.Principal17;
 import quagliato.prog2.lista01.exe19.Principal19;
+import quagliato.prog2.lista01.exe22.Principal22;
 import quagliato.prog2.util.StringUtils;
 
 /**
@@ -47,6 +48,9 @@ public class Main {
                     break;
                 case 19:
                     (new Principal19()).execute();
+                    break;
+                case 22:
+                    (new Principal22()).execute();
                     break;
             }
 
