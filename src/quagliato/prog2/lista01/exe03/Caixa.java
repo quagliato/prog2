@@ -47,19 +47,30 @@ public class Caixa {
         this.profundidade = profundidade;
     }
 
-    public Double calculaAreaExt() {
-        if (getLargura() != null && getAltura() != null && getProfundidade() != null) {
-            return ((getLargura() * getAltura()) + (getLargura() * getProfundidade()) + (getAltura() * getProfundidade())) * 2;
-        } else {
+    /*
+     * Método utilizado para cálculo da área externa
+     */
+    public double calculaAreaExt() {
+        if (getLargura() != null
+            && getAltura() != null
+            && getProfundidade() != null) { // valida se nenhum dos dados é nulo
+            return ((getLargura() * getAltura())
+                    + (getLargura() * getProfundidade())
+                    + (getAltura() * getProfundidade())) * 2; // retorna área
+        } else { // se um dos dados é nulo, dispara uma exceção
             throw new RuntimeException("Nenhum dos valores pode ser nulo!");
         }
 
     }
 
-    public Double calculaVolume() {
-        if (getLargura() != null && getAltura() != null && getProfundidade() != null) {
-            return getLargura() * getAltura() * getProfundidade();
-        } else {
+    public double calculaVolume() {
+        if (getLargura() != null
+            && getAltura() != null
+            && getProfundidade() != null) { // valida se nenhum dos dados é nulo
+            return getLargura()
+                   * getAltura()
+                   * getProfundidade(); // retorna volume
+        } else { // se um dos dados é nulo, dispara uma exceção
             throw new RuntimeException("Nenhum dos valores pode ser nulo!");
         }
 

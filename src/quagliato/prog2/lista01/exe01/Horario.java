@@ -18,7 +18,8 @@ public class Horario {
     }
 
     public boolean setHora(int hora) {
-        if (hora >= 0 && hora <= 23) {
+        if (hora >= 0 && hora <= 23) { // validação da hora para permitir apenas
+                                       // valores no padrão 24h
             this.hora = hora;
             return true;
         }
@@ -26,7 +27,8 @@ public class Horario {
     }
 
     public boolean setMin(int min) {
-        if (min >= 0 && min <= 59) {
+        if (min >= 0 && min <= 59) { // validação dos minutos para permitir
+                                     // apenas valores entre 0 e 59
             this.min = min;
             return true;
         }

@@ -55,7 +55,6 @@ public class Main {
                 } else {
                     System.out.println("Exercício ainda não realizado.");
                 }
-                
 
             }
 
