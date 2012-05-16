@@ -12,6 +12,9 @@ public class Texto {
         return texto;
     }
     
+    /*
+     * Método que adiciona texto ao já existente
+     */
     public void addTexto(String texto) {
         this.texto += ("".equals(this.texto) ? "" : "\n") + texto;
     }
