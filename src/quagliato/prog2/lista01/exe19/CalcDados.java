@@ -15,23 +15,26 @@ public class CalcDados {
     private double operando[];
     private char operador;
 
+    /*
+     * Método que seta o operando
+     */
     public void setOperando(int i, double valor) {
-        if (this.operando == null) {
-            this.operando = new double[2];
+        if (this.operando == null) { // se operando for nulo
+            this.operando = new double[2]; // cria nova instancia
         }
         this.operando[i - 1] = valor;
     }
 
     public double getOperando(int i) {
-        if (this.operando != null) {
-            return operando[i - 1];
+        if (this.operando != null) { // se operando não for nulo
+            return operando[i - 1]; // retorna operando
         }
         return 3550; //TODO: Criar exception
     }
 
     public void setOperador(char op) {
-        if (CalcDados.operadorValido(op)) {
-            this.operador = op;
+        if (CalcDados.operadorValido(op)) { // valida o operador
+            this.operador = op; // seta operando
         }
 
     }
@@ -40,6 +43,10 @@ public class CalcDados {
         return this.operador;
     }
 
+    /*
+     * Método que verifica se o operandor escolhido é válido usando as
+     * definições estáticas
+     */
     public static boolean operadorValido(char op) {
         if (op != CalcDados.ADICAO
                 && op != CalcDados.SUBTRACAO
