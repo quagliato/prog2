@@ -6,6 +6,12 @@ package quagliato.prog2.lista01.exe09;
  */
 public enum TipoVinculo {
     
+    /*
+     * EMP: Empregado
+     * SOC: Sócio
+     * EST: Estagiário
+     */
+    
     EMP, SOC, EST;
     
 }

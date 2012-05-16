@@ -24,6 +24,10 @@ public class Main {
 
     public static void main(String args[]) {
 
+        /*
+         * Instancia um Map onde a chave é o número do exerício e a classe
+         * é o valor utilizado na execução
+         */
         Map<Integer, Class> exercicios = new HashMap<Integer, Class>();
         exercicios.put(1, ExTesteHorario.class);
         exercicios.put(3, ExTestadorDeCaixa.class);
@@ -34,25 +38,29 @@ public class Main {
         exercicios.put(19, Principal19.class);
         exercicios.put(22, Principal22.class);
 
-        boolean exit = false;
+        boolean exit = false; // declara e inicia um boolean pra tratar o fim
 
         while (!exit) {
             System.out.print("Escolha o exercicio da lista 1 (0 para sair): ");
             Scanner s = new Scanner(System.in);
-            int a = s.nextInt();
+            int a = s.nextInt(); // recebe o valor
 
-            if (a == 0) {
+            if (a == 0) { // se for 0, ele encerra o programa
                 exit = true;
             } else {
-                if (exercicios.containsKey(a)) {
+                if (exercicios.containsKey(a)) { // se o map conter a chave
                     try {
+                        /*
+                         * Faz o cast para a interface Exercicio e executa
+                         * o método execute();
+                         */
                         ((Exercicio) exercicios.get(a).newInstance()).execute();
                     } catch (InstantiationException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     } catch (IllegalAccessException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else {
+                } else { // se o map não conter a chave, mostra a mensagem
                     System.out.println("Exercício ainda não realizado.");
                 }
 

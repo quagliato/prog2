@@ -25,14 +25,24 @@ public class ExTesteColaborador implements Exercicio {
 
         Scanner s = new Scanner(System.in);
 
+        /*
+         * Variáveis utilizadas pra não ter que armazenar e iterar uma lista
+         * de colaboradores
+         */
         String nomeMaiorRendimento = "";
         double maiorRendimento = 0;
 
         String nomeMaiorCusto = "";
         double maiorCusto = 0;
 
+        /*
+         * Loop que realizada a leitura e processamento dos colaboradores
+         */
         for (int i = 0; i < QTDE_COLABORADORES; i++) {
 
+            /*
+             * Leitura dos dados
+             */
             System.out.println(StringUtils.repeat('-', 80));
 
             System.out.println("COLABORADOR " + (i + 1));
@@ -52,17 +62,34 @@ public class ExTesteColaborador implements Exercicio {
             System.out.print("QTDE HORAS.........: ");
             qtdeHorasMes = s.nextDouble();
 
+            /* 
+             * Instancia o colaborador
+             */
             Colaborador colaborador = new Colaborador(nome, tipoVinculo);
 
+            /*
+             * Calcula os rendimentos
+             */
             double rendimentos = colaborador.calcularRendimento(anosServico, vlHora, qtdeHorasMes);
 
+            /*
+             * Calcula o custo
+             */
             double custo = colaborador.calculaCusto(rendimentos);
 
+            /*
+             * Se o rencimento for maior que o maior rendimento
+             * atualiza as variáveis de controle
+             */
             if (rendimentos > maiorRendimento) {
                 maiorRendimento = rendimentos;
                 nomeMaiorRendimento = colaborador.getNome();
             }
 
+            /*
+             * Se o custo for maior que o maior custo
+             * atualiza as variáveis de controle
+             */
             if (custo > maiorCusto) {
                 maiorCusto = custo;
                 nomeMaiorCusto = colaborador.getNome();
@@ -72,6 +99,9 @@ public class ExTesteColaborador implements Exercicio {
 
         System.out.println(StringUtils.repeat('*', 80));
         
+        /*
+         * Formata os valores
+         */
         NumberFormat numberFormatter = new DecimalFormat();
         numberFormatter.setMaximumFractionDigits(2);
         numberFormatter.setMinimumFractionDigits(2);

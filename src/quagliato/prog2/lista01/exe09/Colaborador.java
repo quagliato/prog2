@@ -17,6 +17,9 @@ public class Colaborador {
         this.tipoVinculo = tipoVinculo;
     }
 
+    /*
+     * Método que calcula o rendimento do Colaborador
+     */
     public double calcularRendimento(int anosServico, double vlHora, double qtdeHorasMes) {
         this.anosServico = anosServico;
         this.vlHora = vlHora;
@@ -24,14 +27,14 @@ public class Colaborador {
 
         double rendimentos = 0;
 
-        if (this.tipoVinculo == null)
+        if (this.tipoVinculo == null) // verifica se o tipoVinculo não é nulo
             return -1;
 
-        switch (this.tipoVinculo) {
-            case EST:
+        switch (this.tipoVinculo) { // faz o switch para realizar o cálculo
+            case EST: // se for estagiario
                 rendimentos = this.vlHora * 80;
                 break;
-            case EMP:
+            case EMP: // se for empregrado
                 double vlBaseHora = this.vlHora * (1 + (0.10 * this.anosServico));
                 
                 if (this.qtdeHorasMes > 144)
@@ -40,7 +43,7 @@ public class Colaborador {
                     rendimentos = vlBaseHora * this.qtdeHorasMes;
                 
                 break;
-            case SOC:
+            case SOC: // se for socio
                 rendimentos = this.vlHora * this.qtdeHorasMes;
                 break;
         }
@@ -49,16 +52,22 @@ public class Colaborador {
         return rendimentos;
     }
     
+    /*
+     * Método que calcula o custo de cada pessoa
+     */
     public double calculaCusto(double rendimentos) {
         double custos = 0;
         
-        if (this.tipoVinculo == null)
+        if (this.tipoVinculo == null) // verifica se tipoVinculo não é nulo
             return -1;
         
         switch (this.tipoVinculo) {
-            case EMP:
+            case EMP: // se for empregrado
                 custos = rendimentos * 1.8;
                 break;
+            /*
+             * Se for estagiario ou socio, a ação é a mesma.
+             */
             case EST:
             case SOC:
                 custos = rendimentos;
